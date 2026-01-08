@@ -46,11 +46,7 @@ const Features = () => {
                     </p>
                 </div>
 
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                    gap: '2rem'
-                }}>
+                <div className="grid-cols-3">
                     {features.map((f, i) => (
                         <div key={i} className="glass-card">
                             <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{f.icon}</div>

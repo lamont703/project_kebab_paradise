@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer style={{ borderTop: '1px solid var(--border-light)', padding: '4rem 0', background: '#050505' }}>
-            <div className="container" style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
+            <div className="container footer-row">
                 <div>
                     <div style={{ fontSize: '1.5rem', fontWeight: '800', marginBottom: '1rem', color: 'white' }}>
                         RestoVoice<span style={{ color: 'var(--primary)' }}>.ai</span>
@@ -13,7 +13,7 @@ const Footer = () => {
                     </p>
                 </div>
 
-                <div style={{ display: 'flex', gap: '4rem' }}>
+                <div className="footer-links" style={{ display: 'flex', gap: '4rem' }}>
                     <div>
                         <h4 style={{ color: 'white', marginBottom: '1rem' }}>Product</h4>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>

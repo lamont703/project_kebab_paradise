@@ -35,26 +35,16 @@ const Hero = () => {
                     ✨ Featuring Pilot with <span style={{ color: '#fff' }}>Kebab Paradise</span>
                 </div>
 
-                <h1 style={{
-                    fontSize: '4rem',
-                    fontWeight: '800',
-                    lineHeight: '1.1',
-                    marginBottom: '1.5rem'
-                }}>
+                <h1 className="hero-title">
                     24/7 AI Phone Answering <br />
                     <span className="text-gradient-primary">for Restaurants</span>
                 </h1>
 
-                <p style={{
-                    fontSize: '1.25rem',
-                    maxWidth: '600px',
-                    margin: '0 auto 2.5rem',
-                    color: 'var(--text-muted)'
-                }}>
+                <p className="hero-text">
                     Never miss a call again. Our AI answers phones, takes orders, and manages reservations with human-like accuracy.
                 </p>
 
-                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginBottom: '4rem' }}>
+                <div className="hero-buttons">
                     <a href="#pricing" className="btn-primary" style={{ fontSize: '1.1rem', padding: '1rem 2rem', textDecoration: 'none' }}>
                         Get Started
                     </a>
@@ -83,7 +73,7 @@ const Hero = () => {
                         <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Live Dashboard - Kebab Paradise</div>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', textAlign: 'left' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', textAlign: 'left' }}>
                         {/* Left: Chat Transcript */}
                         <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1.5rem', borderRadius: '12px' }}>
                             <h3 style={{ fontSize: '1rem', marginBottom: '1rem', color: '#fff' }}>Live Call Transcript</h3>
@@ -104,7 +94,7 @@ const Hero = () => {
                         </div>
 
                         {/* Right: Stats */}
-                        <div style={{ display: 'grid', gridTemplateRows: '1fr 1fr', gap: '1rem' }}>
+                        <div style={{ display: 'grid', gridTemplateRows: 'auto auto', gap: '1rem' }}>
                             <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1.5rem', borderRadius: '12px' }}>
                                 <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '0.5rem' }}>Missed Calls Recovered</div>
                                 <div style={{ fontSize: '2.5rem', fontWeight: '700', color: '#34d399' }}>142</div>
