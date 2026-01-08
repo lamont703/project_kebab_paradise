@@ -55,12 +55,12 @@ const Hero = () => {
                 </p>
 
                 <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginBottom: '4rem' }}>
-                    <button className="btn-primary" style={{ fontSize: '1.1rem', padding: '1rem 2rem' }}>
+                    <a href="#pricing" className="btn-primary" style={{ fontSize: '1.1rem', padding: '1rem 2rem', textDecoration: 'none' }}>
                         Get Started
-                    </button>
-                    <button className="btn-secondary" style={{ fontSize: '1.1rem', padding: '1rem 2rem' }}>
+                    </a>
+                    <a href="#demo" className="btn-secondary" style={{ fontSize: '1.1rem', padding: '1rem 2rem', textDecoration: 'none' }}>
                         Hear Samples
-                    </button>
+                    </a>
                 </div>
 
                 {/* Visual Mockup */}

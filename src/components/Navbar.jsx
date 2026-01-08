@@ -24,7 +24,7 @@ const Navbar = () => {
                 </div>
 
                 <div>
-                    <button className="btn-primary">Schedule a Demo</button>
+                    <a href="#demo" className="btn-primary" style={{ textDecoration: 'none' }}>Schedule a Demo</a>
                 </div>
             </div>
         </nav>
