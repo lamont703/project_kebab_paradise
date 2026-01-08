@@ -11,15 +11,16 @@ const DemoSection = () => {
                     Experience the conversation quality that drives sales for <strong>Kebab Paradise</strong>.
                 </p>
 
-                <div style={{
+                <div className="demo-card" style={{
                     background: 'var(--bg-card)',
                     backdropFilter: 'blur(12px)',
-                    padding: '3rem',
+                    padding: '2rem', /* Reduced from 3rem */
                     borderRadius: '24px',
                     border: '1px solid var(--border-light)',
                     maxWidth: '500px',
                     width: '100%',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    boxSizing: 'border-box' /* Ensure padding doesn't overflow */
                 }}>
                     <h3 style={{ marginBottom: '1.5rem' }}>Request a Live Demo Call</h3>
                     <p style={{ fontSize: '0.9rem', marginBottom: '2rem' }}>

@@ -240,26 +240,35 @@ p {
     flex-direction: column;
     position: fixed;
     top: 80px;
-    /* Start below navbar */
     left: 0;
     right: 0;
     bottom: 0;
-    /* Cover full screen */
-    background-color: var(--bg-dark);
-    /* Solid background */
-    z-index: 49;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    background-color: #0a0a0a !important;
+    /* Force opaque black */
+    z-index: 100;
     padding: 2rem;
     gap: 2rem;
     border-top: 1px solid var(--border-light);
     align-items: center;
-    /* Center items */
+    justify-content: flex-start;
+    /* Move items to top */
+    padding-top: 4rem;
+    /* Add spacing from navbar */
+    overflow-y: auto;
+    /* Allow scrolling if menu is tall */
   }
 
   .mobile-menu-open .mobile-menu-overlay a {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    /* Slightly smaller font */
     color: white;
     width: 100%;
+    max-width: 280px;
+    /* Constrain width */
     text-align: center;
+    box-sizing: border-box;
   }
 
   /* Hero */
@@ -272,15 +281,23 @@ p {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    /* Center buttons */
+    gap: 1rem;
+    padding: 0 1rem;
+    /* Ensure container has breathing room */
+    box-sizing: border-box;
   }
 
   .btn-primary,
   .btn-secondary {
     width: 100%;
     /* Full width buttons */
-    max-width: 320px;
-    /* Prevent being overly wide */
+    max-width: 280px;
+    /* Reduced from 320px to be safe on small screens */
+    padding: 0.75rem 1rem !important;
+    /* Force smaller horizontal padding */
+    font-size: 1rem !important;
+    /* Slightly smaller text */
+    justify-content: center;
   }
 
   /* Sections */
@@ -312,6 +329,25 @@ p {
 
   /* Prevent horizontal overflow general fix */
   .container {
+    width: 100%;
+    max-width: 100vw;
     overflow-x: hidden;
+    padding: 0 1rem;
+    /* Slightly smaller padding for mobile */
+    box-sizing: border-box;
+  }
+
+  /* Fix container overflow */
+  body,
+  html {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Ensure images/mockups shrink */
+  img,
+  .glass-card,
+  div {
+    max-width: 100%;
   }
 }
