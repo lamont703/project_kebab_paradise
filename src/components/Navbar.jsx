@@ -22,6 +22,7 @@ const Navbar = () => {
                 {/* Desktop Links */}
                 <div className="nav-links">
                     <a href="#features" className="nav-link">Features</a>
+                    <a href="#use-cases" className="nav-link">Use Cases</a>
                     <a href="#demo" className="nav-link">Demo</a>
                     <a href="#pricing" className="nav-link">Pricing</a>
                 </div>
@@ -44,6 +45,7 @@ const Navbar = () => {
                 {isOpen && (
                     <div className="mobile-menu-overlay">
                         <a href="#features" className="nav-link" onClick={() => setIsOpen(false)}>Features</a>
+                        <a href="#use-cases" className="nav-link" onClick={() => setIsOpen(false)}>Use Cases</a>
                         <a href="#demo" className="nav-link" onClick={() => setIsOpen(false)}>Demo</a>
                         <a href="#pricing" className="nav-link" onClick={() => setIsOpen(false)}>Pricing</a>
                         <a href="#demo" className="btn-primary" onClick={() => setIsOpen(false)} style={{ justifyContent: 'center' }}>
