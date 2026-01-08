@@ -191,6 +191,8 @@ p {
   gap: 1rem;
   justify-content: center;
   margin-bottom: 4rem;
+  flex-wrap: wrap;
+  /* Fix clipping by wrapping */
 }
 
 /* Grid Layouts */
@@ -206,6 +208,15 @@ p {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem;
+}
+
+/* Footer brand message */
+.footer-brand {
+  text-align: left;
+}
+
+.footer-links {
+  text-align: left;
 }
 
 /* --- Mobile Queries --- */
@@ -229,19 +240,26 @@ p {
     flex-direction: column;
     position: fixed;
     top: 80px;
+    /* Start below navbar */
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--bg-dark);
+    /* Cover full screen */
+    background-color: var(--bg-dark);
+    /* Solid background */
     z-index: 49;
     padding: 2rem;
     gap: 2rem;
     border-top: 1px solid var(--border-light);
+    align-items: center;
+    /* Center items */
   }
 
   .mobile-menu-open .mobile-menu-overlay a {
     font-size: 1.5rem;
     color: white;
+    width: 100%;
+    text-align: center;
   }
 
   /* Hero */
@@ -253,12 +271,16 @@ p {
   .hero-buttons {
     flex-direction: column;
     width: 100%;
+    align-items: center;
+    /* Center buttons */
   }
 
   .btn-primary,
   .btn-secondary {
     width: 100%;
     /* Full width buttons */
+    max-width: 320px;
+    /* Prevent being overly wide */
   }
 
   /* Sections */
@@ -269,10 +291,27 @@ p {
   /* Footer */
   .footer-row {
     flex-direction: column;
+    align-items: center;
+    /* Center footer content */
     text-align: center;
   }
 
+  .footer-brand,
   .footer-links {
+    text-align: center;
+    width: 100%;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-links {
+    gap: 2rem !important;
+    /* Force spacing between link columns */
+  }
+
+  /* Prevent horizontal overflow general fix */
+  .container {
+    overflow-x: hidden;
   }
 }

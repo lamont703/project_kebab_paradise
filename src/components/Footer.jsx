@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer style={{ borderTop: '1px solid var(--border-light)', padding: '4rem 0', background: '#050505' }}>
             <div className="container footer-row">
-                <div>
+                <div className="footer-brand">
                     <div style={{ fontSize: '1.5rem', fontWeight: '800', marginBottom: '1rem', color: 'white' }}>
                         RestoVoice<span style={{ color: 'var(--primary)' }}>.ai</span>
                     </div>
